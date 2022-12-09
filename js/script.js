@@ -28,7 +28,7 @@
 
     const activeArticles = document.querySelectorAll('.posts .active');
 
-    for (const activeArticle of activeArticles) {
+    for (let activeArticle of activeArticles) {
       activeArticle.classList.remove('active');
     }
 
@@ -63,7 +63,7 @@
 
     const articles = document.querySelectorAll(optArticleSelector);
 
-    for (let article of articles) {
+    for (const article of articles) {
       /* [DONE] get the article id */
 
       const articleId = article.getAttribute('id');
