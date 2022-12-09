@@ -28,7 +28,7 @@
 
     const activeArticles = document.querySelectorAll('.posts .active');
 
-    for (let activeArticle of activeArticles) {
+    for (const activeArticle of activeArticles) {
       activeArticle.classList.remove('active');
     }
 
@@ -55,9 +55,7 @@
     /* [DONE] remove contents of titleList */
 
     const titleList = document.querySelector(optTitleListSelector);
-    function clearMessages() {
-      titleList.innerHTML = '';
-    }
+    titleList.innerHTML = '';
 
     /* [DONE] for each article */
 
@@ -66,7 +64,6 @@
     const articles = document.querySelectorAll(optArticleSelector);
 
     for (let article of articles) {
-
       /* [DONE] get the article id */
 
       const articleId = article.getAttribute('id');
@@ -97,7 +94,7 @@
     const links = document.querySelectorAll('.titles a');
     console.log(links);
 
-    for (let link of links) {
+    for (const link of links) {
       link.addEventListener('click', titleClickHandler);
     }
   }
